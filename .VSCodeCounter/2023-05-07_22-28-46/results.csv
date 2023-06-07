@@ -1,0 +1,30 @@
+"filename", "language", "JavaScript", "CSS", "JSON", "comment", "blank", "total"
+"d:\Ramen IO\project-ramen-io\src\app\app.jsx", "JavaScript", 13, 0, 0, 0, 5, 18
+"d:\Ramen IO\project-ramen-io\src\bootstrap\config.json", "JSON", 0, 0, 394, 0, 0, 394
+"d:\Ramen IO\project-ramen-io\src\bootstrap\css\bootstrap-theme.css", "CSS", 0, 581, 0, 8, 1, 590
+"d:\Ramen IO\project-ramen-io\src\bootstrap\css\bootstrap-theme.min.css", "CSS", 0, 2, 0, 5, 0, 7
+"d:\Ramen IO\project-ramen-io\src\bootstrap\css\bootstrap.css", "CSS", 0, 954, 0, 9, 1, 964
+"d:\Ramen IO\project-ramen-io\src\bootstrap\css\bootstrap.min.css", "CSS", 0, 2, 0, 5, 0, 7
+"d:\Ramen IO\project-ramen-io\src\bootstrap\js\bootstrap.js", "JavaScript", 312, 0, 0, 34, 94, 440
+"d:\Ramen IO\project-ramen-io\src\bootstrap\js\bootstrap.min.js", "JavaScript", 1, 0, 0, 8, 2, 11
+"d:\Ramen IO\project-ramen-io\src\components\index.js", "JavaScript", 2, 0, 0, 0, 1, 3
+"d:\Ramen IO\project-ramen-io\src\components\ramen 2.json", "JSON", 0, 0, 1, 0, 1, 2
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\Smodal.jsx", "JavaScript", 48, 0, 0, 0, 8, 56
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\animation.jsx", "JavaScript", 18, 0, 0, 0, 5, 23
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\container.jsx", "JavaScript", 51, 0, 0, 0, 3, 54
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\containers.jsx", "JavaScript", 51, 0, 0, 0, 3, 54
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\form.jsx", "JavaScript", 80, 0, 0, 6, 15, 101
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\home.jsx", "JavaScript", 41, 0, 0, 0, 10, 51
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\modal.jsx", "JavaScript", 48, 0, 0, 0, 8, 56
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\navbar.jsx", "JavaScript", 34, 0, 0, 2, 4, 40
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\sample-component.jsx", "JavaScript", 45, 0, 0, 14, 7, 66
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\search_bar.jsx", "JavaScript", 199, 0, 0, 0, 17, 216
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\signin.jsx", "JavaScript", 69, 0, 0, 6, 17, 92
+"d:\Ramen IO\project-ramen-io\src\components\sample-component\triggerbutton.jsx", "JavaScript", 13, 0, 0, 0, 1, 14
+"d:\Ramen IO\project-ramen-io\src\index.css", "CSS", 0, 203, 0, 14, 38, 255
+"d:\Ramen IO\project-ramen-io\src\index.js", "JavaScript", 10, 0, 0, 0, 2, 12
+"d:\Ramen IO\project-ramen-io\src\passwordTest.js", "JavaScript", 14, 0, 0, 11, 14, 39
+"d:\Ramen IO\project-ramen-io\src\server\db.js", "JavaScript", 18, 0, 0, 3, 4, 25
+"d:\Ramen IO\project-ramen-io\src\server\server.js", "JavaScript", 204, 0, 0, 67, 44, 315
+"d:\Ramen IO\project-ramen-io\src\webpack.config.js", "JavaScript", 12, 0, 0, 10, 2, 24
+"Total", "-", 1283, 1742, 395, 202, 307, 3929

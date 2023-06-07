@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter");
+/*colors
+background: #FBF3D9
+hover:#d6ceaf
+border:#4F4E4E
+red: #BB2C2C
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carlito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+html{
+    background-color: #FBF3D9 !important;
+  }
+  
+  body::-webkit-scrollbar{
+    display: none;
+  }
+.flex{
+  padding: 0px 0px 5px;
+}
+.container {
+    position: relative;
+}
+.main{
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.top{
+   flex-grow: 1;
+   align-self: stretch;
+}
+.lottie-svg-class{
+    height: 50vh !important;
+    width: 100% !important;
+    position: relative;   
+}
+
+.space {
+    display: flex;
+  }
+ .space.space-around {
+    justify-content: space-around;
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6vw;
+    line-height: 6vh;
+    top: 0;
+    left: 0;
+    width:100%;    
+    height:100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+  }
+
+
+.bottom{
+    align-self: stretch;
+    flex-grow: 1;
+
+}
+
+.searchFunc{
+  font-family: 'Quicksand';
+  width: 6vw ;
+  width: 200px;
+  border: #4F4E4E;
+ border-width: 10px;
+}
+
+/*search bar and dropdwon*/
+.optDropdown{
+    flex:1;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    width:110px;
+    height: 25px;
+}
+.searchBar{
+    display:flex!important;
+    flex-direction: row!important;
+}
+
+/*nav bar styling*/
+.nav {
+    font-size: 25px;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    border-width: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+   
+    
+  }
+  .nav ul {
+    padding: 0px;
+   
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 2px;
+    
+  }
+  
+  .nav a {
+    color: inherit;
+    text-decoration: none;
+    
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .nav li:hover {
+    background-color:#d6ceaf;
+   
+    
+  }
+
+  /*modal*/
+  .modal-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transform: translateZ(0);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2.5em 1.5em 1.5em 1.5em;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  @media screen and (min-width: 500px) {
+    /* Center the Modal! */
+    .modal-area {
+      left: 50%;
+      top: 50%;
+      height: auto;
+      font-family: 'Quicksand';
+      transform: translate(-50%, -50%);
+      max-width: 15em;
+      max-height: calc(100% - 1em);
+    }
+  }
+  
+  ._modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    line-height: 1;
+    background: #f6f6f7;
+    border: 0;
+    box-shadow: 0;
+    cursor: pointer;
+  }
+  
+  ._modal-close-icon {
+    width: 25px;
+    height: 25px;
+    fill: transparent;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-width: 2;
+  }
+  
+  .modal-body {
+    padding-top: 0.25em;
+  }
+  ._hide-visual {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+  input[type=text] {
+    border: 1px solid #4F4E4E;
+    border-radius: 4px;
+  }
+  span{
+  font-size:30px;
+  padding: 5px 5px 5px 5px;
+  }
+  /*button*/
+  .btn {
+    margin:10px;
+    @apply font-bold py-2 px-4 rounded;
+    
+  }
+  .btn-blue {
+    background: #d6ceaf;
+    
+  }
+
+
+  .scroll-lock {
+    overflow: hidden;
+    margin-right: 17px;
+  }
+  
+/* table css */
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  font-family: 'Quicksand';
+  border: 1px solid #4F4E4E; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th{
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+  background-color:#FBF3D9;
+}
+
+#myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+  
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows 
+  border-bottom: 1px solid #ddd;*/
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #d6ceaf;
+}
