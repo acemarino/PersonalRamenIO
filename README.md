@@ -1,6 +1,5 @@
 # project-ramen-io
-
-project-ramen-io created by GitHub Classroom
+This is a personal copy of Ramen Io with permission from proffesor and team members. 
 
 ## Installation
 
@@ -24,5 +23,7 @@ Your database server should be active before launching.
 ```
 npm run dev
 ```
+## Visual
 
-## What works and what doesn't
+https://github.com/acemarino/PersonalRamenIO/assets/27390600/a5e46024-58cf-41cb-bf22-d47963743eaf
+
