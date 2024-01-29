@@ -1,5 +1,5 @@
 # project-ramen-io
-This is a personal copy of Ramen Io with permission from proffesor and team members. 
+This is a personal copy of Ramen Io with permission from professor and team members. 
 
 ## Installation
 
