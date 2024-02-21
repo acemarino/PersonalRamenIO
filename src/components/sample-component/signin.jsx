@@ -28,7 +28,7 @@ let handleSubmit = async (e) => {
       console.log('good');
       
 
-      fetch('http://localhost:3001/brand/s', {
+      fetch('http://localhost:3001/LogIn', {
         method: "POST",
         body: JSON.stringify({
           username: username.replace(/\s/g,''),

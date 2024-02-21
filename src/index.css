@@ -22,8 +22,9 @@ html{
   body::-webkit-scrollbar{
     display: none;
   }
-.flex{
+.formFormat{
   padding: 0px 0px 5px;
+  display: flex;
 }
 .container {
     position: relative;

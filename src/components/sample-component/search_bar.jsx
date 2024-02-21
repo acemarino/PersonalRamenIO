@@ -1,17 +1,14 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import React, { useState, useEffect } from 'react';
-import Select from "react-select";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import React, { useState, useEffect } from 'react';
+
 const Searchbar = props =>{
+//set up intial state for search
 const getInitialState = () => {
     const value = "Brand";
     return value;
     };
+
+    //set states
 const [search, setSearch] = useState("");
 const [data, setData] = useState([]);
 const [value, setValue] = useState(getInitialState);
@@ -19,16 +16,17 @@ const handleChange = (e) => {
     setValue(e.target.value);
   };
 
+//submit funtionc with fetch request, that takes in a search category and a value
 let handleSubmit = async (e) => {
   e.preventDefault();
     console.log(value);
-    if(value =="Brand"){
-        fetch('http://localhost:3001/brand/get/b',{
+        fetch('http://localhost:3001/get',{
             method: "POST",
             body: JSON.stringify({
-                search: search,
-                value: value
+                search: search, //category(brand, country, etc..)
+                value: value //value(indomei, japan, etc...)
             }),
+            // set headers  to get a JSON in return
             headers: {
               'Accept': 'application/json',
               "Content-Type": "application/json"
@@ -36,9 +34,14 @@ let handleSubmit = async (e) => {
           })
         .then((response)=>response.json())
         .then((data) => {
+          
+          //print to console what data received
           console.log(data);
+          
           setData(data);
-            console.log(data);
+          
+          // print after setData to check match
+          console.log(data);
         })
         .catch((err) => {
           console.log(err.message);
@@ -47,155 +50,63 @@ let handleSubmit = async (e) => {
         useEffect(() => {
           fetchData();
         }, []);
-    }
-    if(value =="Name"){
-        fetch('http://localhost:3001/brand/get/n',{
-            method: "POST",
-            body: JSON.stringify({
-                search: search,
-                value: value
-            }),
-            headers: {
-              'Accept': 'application/json',
-              "Content-Type": "application/json"
-            }
-          })
-        .then((response)=>response.json())
-        .then((data) => {
-          console.log(data);
-          setData(data);
-            console.log(data);
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-      
-        useEffect(() => {
-          fetchData();
-        }, []);
-    }
-    if(value =="Country"){
-        fetch('http://localhost:3001/brand/get/c',{
-            method: "POST",
-            body: JSON.stringify({
-                search: search,
-                value: value
-            }),
-            headers: {
-              'Accept': 'application/json',
-              "Content-Type": "application/json"
-            }
-          })
-        .then((response)=>response.json())
-        .then((data) => {
-          console.log(data);
-          setData(data);
-            console.log(data);
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-      
-        useEffect(() => {
-          fetchData();
-        }, []);
-    }
-    if(value =="Rating"){
-      fetch('http://localhost:3001/brand/get/rat',{
-          method: "POST",
-          body: JSON.stringify({
-              search: search,
-              value: value
-          }),
-          headers: {
-            'Accept': 'application/json',
-            "Content-Type": "application/json"
-          }
-        })
-      .then((response)=>response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-          console.log(data);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-    
-      useEffect(() => {
-        fetchData();
-      }, []);
-  }
-    if(value =="Restaurant"){
-      fetch('http://localhost:3001/brand/get/rest',{
-          method: "POST",
-          body: JSON.stringify({
-              search: search,
-              value: value
-          }),
-          headers: {
-            'Accept': 'application/json',
-            "Content-Type": "application/json"
-          }
-        })
-      .then((response)=>response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-          console.log(data);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-    
-      useEffect(() => {
-        fetchData();
-      }, []);
-  }
-    
-
+   
+    // don't perform default action    
     e.preventDefault();
 };
 
 
   return (
-   
-    <>
-
+  <>
     <div className='searchBar'>
-    <form  onSubmit={handleSubmit} className='flex'>
-    <div className="dropdown-container">
-    <select value={value} onChange={handleChange} className='optDropdown'>
-        <option value="Brand">Brand</option>
-        <option value="Country">Country</option>
-        <option value="Name">Name</option>
-        <option value="Rating">Rating</option>
-        <option value="Restaurant">Restaurant</option>
-      </select>
+      <form  onSubmit={handleSubmit} className='formFormat'>
         
-      </div>
-            <div className='searchFunc'>
+        {/*dropdown for category select */} 
+        <div className="dropdown-container">
+          <select value={value} onChange={handleChange} className='optDropdown'>
+            <option value="Brand">
+              Brand
+            </option>
+            <option value="Country">
+              Country
+            </option>
+            <option value="Name">
+              Name
+            </option>
+            <option value="Rating">
+              Rating
+            </option>
+            <option value="Restaurant">
+              Restaurant
+            </option>
+          </select>
+        </div>
+        
+        {/*search bar to type in to get search value */} 
+        <div className='searchFunc'>
+          <input
+            type="text"
+            placeholder="Enter search term here"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </form>
+    </div>
+     
+    {/*Results table*/} 
+    <div>
+      <table id="myTable">
+        <tbody>
+          <tr>
+            <th>Reviewer</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Country</th>
+            <th>Style</th>
+            <th>Rating</th>
+          </tr>
 
-                <input
-                    type="text"
-                    placeholder="Enter search term here"
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-            </div>
-        </form>
-      </div>
-    
-    <div >
-<table id="myTable">
-<tbody>
-<tr>
-          <th>Reviewer</th>
-          <th>Name</th>
-          <th>Brand</th>
-          <th>Country</th>
-          <th>Style</th>
-          <th>Rating</th>
-        </tr>
+        {/* apply .map() method to iterate through data array in order to render a table of results */} 
         {data.map((item, index) => (
           <tr key={index}>
             <td>{item.reviewer}</td>
@@ -206,11 +117,10 @@ let handleSubmit = async (e) => {
             <td>{item.rating}</td>
           </tr>
         ))}
-</tbody>
-        
+        </tbody>
       </table>
     </div>
-    </>
+  </>
   );
 }
 export default Searchbar;
